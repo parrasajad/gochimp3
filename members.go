@@ -35,7 +35,7 @@ type MemberRequest struct {
 	Location        *MemberLocation        `json:"location,omitempty"`
 	IPOpt           string                 `json:"ip_opt,omitempty"`
 	IPSignup        string                 `json:"ip_signup,omitempty"`
-  Tags            []string               `json:"tags,omitempty"`
+  	Tags            []string            	`json:"tags,omitempty"`
 	TimestampSignup string                 `json:"timestamp_signup,omitempty"`
 	TimestampOpt    string                 `json:"timestamp_opt,omitempty"`
 }
@@ -52,6 +52,7 @@ type Member struct {
 	LastChanged   string          `json:"last_changed"`
 	EmailClient   string          `json:"email_client"`
 	LastNote      MemberNoteShort `json:"last_note"`
+	Tags          []MemberTag      `json:"tags,omitempty"`
 
 	api *API
 }
